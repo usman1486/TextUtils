@@ -1,0 +1,65 @@
+.hi
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: 2px solid black;
+    justify-content:center;
+    height: 100px;
+
+}
+
+li{
+list-style: none;
+margin: 20px 20px;
+}
+.contain{
+    display: flex;
+    justify-content:center;
+}
+.cons{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.3fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "side card1 card2 card3";
+    height: 50vh;
+    width: 100vw;
+    grid-gap: 0.3rem;
+}
+.side{
+    text-align: center;
+    grid-area: side;
+    background-color:yellow;
+    
+}
+.card1{
+    text-align: center;
+    border-radius: 20px;
+    grid-area: card1;
+    background-color: purple;
+}
+.card2{
+    text-align: center;
+    border-radius: 20px;
+    grid-area: card2;
+    background-color:red;
+}
+.card3{
+    text-align: center;
+    border-radius: 20px;
+    grid-area: card3;
+    background-color:blue;
+}
+@media(max-width:550px)
+{
+    .cons{
+        grid-template-columns: 1fr;
+        grid-template-rows:0.3fr 1fr 1fr 1fr;
+         grid-template-areas: 
+        "side"
+        "card1"
+        "card2"
+        "card3"
+    }
+}
